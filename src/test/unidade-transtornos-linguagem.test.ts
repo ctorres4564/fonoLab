@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { platform } from './platformTestHelper'
-import { validateModule, validateModules } from '@/lib/validation/moduleSchema'
+import { validateModule } from '@/lib/validation/moduleSchema'
 
 const area = platform.areas.find((a) => a.slug === 'linguagem')!
 const unit = area.units.find((u) => u.slug === 'desenvolvimento-transtornos-linguagem-oral')!
@@ -889,7 +889,7 @@ describe('Módulo 4 — conteúdo de Aprender', () => {
     modulo4.learn.essentialConcepts.forEach((c) => {
       expect(c.term.length).toBeGreaterThan(0)
       expect(c.definition.length).toBeGreaterThan(0)
-      expect(c.example.length).toBeGreaterThan(0)
+      expect(c.example?.length ?? 0).toBeGreaterThan(0)
     })
   })
 

@@ -153,17 +153,17 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
       centralNode: 'Avaliação e Intervenção nos Transtornos de Linguagem',
       nodes: [
         { id: 'n-tl4-central', label: 'Avaliação e Intervenção nos Transtornos de Linguagem', type: 'central' },
-        { id: 'n-tl4-catalise', label: 'Consórcio CATALISE', type: 'essential' },
-        { id: 'n-tl4-diagnostico', label: 'Diagnóstico de TDL', type: 'essential' },
-        { id: 'n-tl4-impacto', label: 'Impacto Funcional e Persistência', type: 'support' },
-        { id: 'n-tl4-avaliacao', label: 'Avaliação Multidimensional', type: 'essential' },
-        { id: 'n-tl4-formal', label: 'Testes Formais', type: 'support' },
-        { id: 'n-tl4-informal', label: 'Amostra de Fala (MLU)', type: 'support' },
-        { id: 'n-tl4-intervencao', label: 'Intervenção Baseada em Evidências', type: 'essential' },
-        { id: 'n-tl4-hibrida', label: 'Abordagens Híbridas', type: 'support' },
-        { id: 'n-tl4-focused', label: 'Estimulação Focada', type: 'support' },
-        { id: 'n-tl4-recasting', label: 'Remodelamento (Recasting)', type: 'support' },
-        { id: 'n-tl4-pais', label: 'Treinamento Parental', type: 'essential' },
+        { id: 'n-tl4-catalise', label: 'Consórcio CATALISE', type: 'primary' },
+        { id: 'n-tl4-diagnostico', label: 'Diagnóstico de TDL', type: 'primary' },
+        { id: 'n-tl4-impacto', label: 'Impacto Funcional e Persistência', type: 'secondary' },
+        { id: 'n-tl4-avaliacao', label: 'Avaliação Multidimensional', type: 'primary' },
+        { id: 'n-tl4-formal', label: 'Testes Formais', type: 'secondary' },
+        { id: 'n-tl4-informal', label: 'Amostra de Fala (MLU)', type: 'secondary' },
+        { id: 'n-tl4-intervencao', label: 'Intervenção Baseada em Evidências', type: 'primary' },
+        { id: 'n-tl4-hibrida', label: 'Abordagens Híbridas', type: 'secondary' },
+        { id: 'n-tl4-focused', label: 'Estimulação Focada', type: 'secondary' },
+        { id: 'n-tl4-recasting', label: 'Remodelamento (Recasting)', type: 'secondary' },
+        { id: 'n-tl4-pais', label: 'Treinamento Parental', type: 'primary' },
       ],
       edges: [
         { id: 'e-tl4-1', from: 'n-tl4-catalise', to: 'n-tl4-diagnostico', label: 'Unifica critérios' },
@@ -690,14 +690,13 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
           {
             id: 'opt-tl4-1-1',
             text: 'Iniciar terapia fonoaudiológica direta de consultório em sessões individuais diretivas estruturadas baseadas em condicionamento operante repetitivo de fonemas.',
-            isCorrect: false,
+            isRecommended: false,
             consequence: 'A criança demonstra frustração e recusa-se a participar do treino diretivo, além de apresentar pouca generalização das palavras no ambiente escolar.',
             explanation: 'Abordagens puramente formais e diretivas em consultório com crianças pequenas frequentemente geram baixa adesão e fraca generalização das metas lexicais cotidianas.',
           },
           {
             id: 'opt-tl4-1-2',
             text: 'Implementar um programa de intervenção híbrida com estimulação focada lúdica na clínica combinado com o treinamento ativo dos pais (parental) para aplicar estratégias de facilitação na rotina domiciliar.',
-            isCorrect: true,
             isRecommended: true,
             consequence: 'A família aplica as estratégias no dia a dia e a criança expande significativamente o vocabulário expressivo, ampliando a socialização escolar de forma ecológica.',
             explanation: 'O treinamento parental estruturado associado a abordagens lúdicas híbridas possui forte suporte científico (Law et al., 2004) para acelerar a generalização lexical e morfossintática em crianças pequenas.',
@@ -705,7 +704,7 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
           {
             id: 'opt-tl4-1-3',
             text: 'Suspender qualquer atendimento clínico direto ou indireto e orientar a família a aguardar até os 5 anos de idade para que a maturação neurológica ocorra espontaneamente.',
-            isCorrect: false,
+            isRecommended: false,
             consequence: 'O atraso de linguagem expressiva persiste aos 5 anos, gerando graves dificuldades adicionais de comportamento e isolamento social na escola primária.',
             explanation: 'Embora alguns late talkers evoluam de forma espontânea, aguardar passivamente sem qualquer estimulação indireta (orientação aos pais) diante de impacto social focado é uma conduta desaconselhável e de risco.',
           },
@@ -719,14 +718,13 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
           {
             id: 'opt-tl4-2-1',
             text: 'Classificar como atraso temporário, aguardando aplicação de novos testes psicométricos de QI não verbal e exame de ressonância magnética cerebral de alta resolução antes de iniciar intervenção.',
-            isCorrect: false,
+            isRecommended: false,
             consequence: 'Pedro permanece com dificuldades sintáticas severas, sendo excluído das brincadeiras com pares na escola por falta de apoio terapêutico em momento oportuno.',
             explanation: 'O CATALISE contraindica atrasar intervenções baseando-se em testes de imagem ou limiares estritos de QI, pois crianças com QI limítrofe compartilham as mesmas necessidades clínicas.',
           },
           {
             id: 'opt-tl4-2-2',
             text: 'Definir o diagnóstico clínico de Transtorno do Desenvolvimento da Linguagem (TDL), estabelecer plano de intervenção focando em estratégias híbridas (remodelamento e estimulação) e considerar a atenção/cognição como condição associada.',
-            isCorrect: true,
             isRecommended: true,
             consequence: 'Pedro recebe suporte fonoaudiológico imediato adaptado, obtendo ganhos na complexidade sintática e facilitando a comunicação com os pares na escola.',
             explanation: 'Os critérios modernos do CATALISE desconsideram o QI não verbal como fator de exclusão rígido (desde que acima de 70) e permitem categorizar o prejuízo como TDL, aceitando sintomas cognitivos/motores como condições associadas.',
@@ -734,7 +732,7 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
           {
             id: 'opt-tl4-2-3',
             text: 'Definir diagnóstico de Transtorno de Linguagem associado a uma Condição Diferenciadora, encaminhando Pedro para neurologista com indicação exclusiva de terapia medicamentosa nootrópica.',
-            isCorrect: false,
+            isRecommended: false,
             consequence: 'A medicação não corrige as alterações sintáticas ou o atraso morfossintático, e Pedro continua com sérias dificuldades funcionais de linguagem expressiva.',
             explanation: 'Condições diferenciadoras referem-se a etiologias biomédicas específicas estabelecidas (como Down ou PC) e não a QI limítrofe ou TDAH isolado.',
           },
@@ -826,7 +824,9 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
         ],
       },
     ],
+  },
 
+  review: {
     flashcards: [
       { id: 'fc-tl4-1', front: 'O que o Consórcio CATALISE estabeleceu para o diagnóstico do TDL?', back: 'Adoção do termo TDL em substituição a DEL, eliminação da discrepância rígida de QI não verbal e foco no impacto funcional e persistência das dificuldades.', tags: ['CATALISE', 'Diagnóstico'] },
       { id: 'fc-tl4-2', front: 'Como o CATALISE conceitua "Condições Associadas"?', back: 'Dificuldades do desenvolvimento (TDAH, dislexia, dispraxia) que coexistem com o TDL, mas não anulam nem explicam inteiramente o transtorno de linguagem.', tags: ['CATALISE', 'Coexistência'] },
@@ -855,7 +855,7 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
       { id: 'fc-tl4-25', front: 'Como avaliar a eficácia do tratamento de linguagem continuamente?', back: 'Coletando amostras de fala periódicas, mensurando alterações na MLU e aplicando escalas funcionais respondidas por pais e professores.', tags: ['Avaliação', 'Progresso'] },
     ],
     finalSynthesis:
-      'A avaliação fonoaudiológica contemporânea nos transtornos de linguagem afasta-se de limiares psicométricos rígidos de inteligência não verbal e foca na identificação do perfil linguístico funcional e do impacto cotidiano decorrente de dificuldades persistentes, alinhada aos preceitos do Consórcio CATALISE para o TDL. O diagnóstico exige uma avaliação multidimensional de todos os níveis da linguagem (fonologia, semântica, morfossintaxe, pragmática), unindo testes padronizados e métricas ecológicas, como a análise da Extensão Média do Enunciado (MLU) em falas espontâneas. A intervenção reabilitadora baseia-se em práticas baseadas em evidências (PBE) com foco funcional, priorizando abordagens híbridas naturalistas como a Estimulação Focada, o Remodelamento (recasting) e o Ensino Incidental em contextos lúdicos significativos. A eficácia terapêutica é significativamente potencializada pelo treinamento e envolvimento ativo dos pais como coterapeuta na rotina diária da criança, acelerando os ganhos gramaticais e a generalização de competências.',
+      'A avaliação fonoaudiológica contemporânea nos transtornos de linguagem afasta-se de limiares psicométricos rígidos de inteligência não verbal e foca na identificação do perfil linguístico funcional e do impacto cotidiano decorrente de dificuldades persistentes, alinhada aos preceitos do Consórcio CATALISE para o TDL. O diagnóstico exige uma avaliação multidimensional de todos os níveis da linguagem (fonologia, semântica, morfossintaxe, pragmática), unindo testes padronizados e métricas ecológicas, como a análise da Extensão Média do Enunciado (MLU) em falas espontâneas. A intervenção reabilitadora baseia-se em práticas baseadas em evidências (PBE) com foco funcional, priorizando abordagens híbridas naturalistas como a Estimulação Focada, o Remodelamento (recasting) e o Ensino Incidental em contextos lúdicos significativos. A eficácia terapêutica é significativamente potencializada pelo treinamento e envolvimento ativo dos pais como coterapeuta na rotina diária da criança, acelerando os ganhos gramaticais e a generalização de competências. O planejamento terapêutico deve ser individualizado, estabelecer metas observáveis e funcionalmente relevantes e considerar idade, perfil linguístico, contextos de participação, prioridades familiares e condições associadas. Nenhum resultado isolado deve determinar o diagnóstico ou a conduta: testes formais precisam ser interpretados em conjunto com anamnese, observação clínica, amostras de fala e relatos de diferentes ambientes. Ao longo da intervenção, o profissional deve registrar a linha de base, acompanhar periodicamente indicadores linguísticos e funcionais e ajustar estratégias quando não houver progresso ou generalização. A colaboração com família e escola amplia as oportunidades de prática em situações naturais. Também é necessário respeitar variações linguísticas e socioculturais, evitar a patologização de diferenças dialetais e encaminhar para avaliação interdisciplinar quando houver sinais auditivos, cognitivos, motores, neurológicos ou emocionais relevantes.',
   },
 
   references: [
