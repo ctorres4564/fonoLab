@@ -889,7 +889,7 @@ describe('Módulo 4 — conteúdo de Aprender', () => {
     modulo4.learn.essentialConcepts.forEach((c) => {
       expect(c.term.length).toBeGreaterThan(0)
       expect(c.definition.length).toBeGreaterThan(0)
-      expect(c.example.length).toBeGreaterThan(0)
+      expect(c.example?.length ?? 0).toBeGreaterThan(0)
     })
   })
 
