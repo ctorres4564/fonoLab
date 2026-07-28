@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { platform } from './platformTestHelper'
-import { validateModule, validateModules } from '@/lib/validation/moduleSchema'
+import { validateModule } from '@/lib/validation/moduleSchema'
 
 const area = platform.areas.find((a) => a.slug === 'linguagem')!
 const unit = area.units.find((u) => u.slug === 'desenvolvimento-transtornos-linguagem-oral')!
