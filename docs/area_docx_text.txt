@@ -1,0 +1,139 @@
+Área: Linguagem
+
+Com base nos capítulos 28 a 48 da Seção 3 — Linguagem, a organização mais coerente é dividir o conteúdo em 7 unidades temáticas. Como o arquivo disponível apresenta apenas o índice, esta estrutura é preliminar e baseada nos títulos dos capítulos.
+
+Unidade 1 — Fundamentos, avaliação e diagnóstico da linguagem
+
+Módulos:
+
+Avaliação das linguagens oral e escritaBase: capítulo 28.
+
+Organização do processo diagnóstico em linguagemBase: capítulos 28 e 31.
+
+Relação entre avaliação, diagnóstico e planejamento terapêuticoBase: capítulo 31.
+
+Unidade 2 — Desenvolvimento fonológico e alterações de fala
+
+Módulos:
+
+Desenvolvimento fonológico
+
+Alterações fonológicas
+
+Princípios de intervenção fonológica
+
+Planejamento terapêutico nos transtornos fonológicos
+
+Unidade 3 — Desenvolvimento e transtornos da linguagem oral
+
+Módulos:
+
+Características dos transtornos específicos de linguagem
+
+Aspectos linguísticos dos transtornos de linguagem
+
+Bases neurobiológicas dos transtornos de linguagem
+
+Avaliação e intervenção nos transtornos de linguagem
+
+Unidade 4 — Leitura, escrita e aprendizagem
+
+Módulos:
+
+Aquisição da leituraBase: capítulo 33.
+
+Desenvolvimento da escritaBase: capítulo 33.
+
+Desvios e dificuldades ortográficasBase: capítulo 34.
+
+Distúrbio de aprendizagem e dislexiaBase: capítulo 35.
+
+Diferenciação entre dificuldades escolares e transtornos específicosBase: capítulos 34 e 35.
+
+Unidade 5 — Linguagem em condições do desenvolvimento
+
+Módulos:
+
+Linguagem no transtorno do espectro autistaBase: capítulo 36.
+
+Avaliação da linguagem em crianças autistasBase: capítulo 36.
+
+Intervenção de linguagem no autismoBase: capítulo 36.
+
+Linguagem na síndrome de DownBase: capítulo 37.
+
+Habilidades comunicativas na paralisia cerebralBase: capítulo 38.
+
+Adaptação da avaliação e da intervenção às condições do desenvolvimentoBase: capítulos 36, 37 e 38.
+
+Unidade 6 — Linguagem adquirida e comunicação no adulto
+
+Módulos:
+
+Linguagem e envelhecimentoBase: capítulo 39.
+
+Alterações comunicativas na população idosaBase: capítulo 39.
+
+Afasias e suas manifestaçõesBase: capítulo 40.
+
+Avaliação multidimensional das afasiasBase: capítulo 40.
+
+Atuação fonoaudiológica nas afasiasBase: capítulo 40.
+
+Disartrias e dispraxiasBase: capítulo 41.
+
+Diferenciação entre alterações de linguagem e alterações motoras da falaBase: capítulos 40 e 41.
+
+Unidade 7 — Linguagem, subjetividade, corpo e práticas terapêuticas
+
+Módulos:
+
+Relações entre linguagem e corpoBase: capítulo 42.
+
+Linguagem e psiquismoBase: capítulo 43.
+
+Limites da atuação fonoaudiológica diante de questões psíquicasBase: capítulo 43.
+
+Grupoterapia fonoaudiológicaBase: capítulo 44.
+
+Perspectiva histórico-cultural na terapia de linguagemBase: capítulo 44.
+
+Unidade 8 — Fluência e gagueira
+
+Módulos:
+
+Fundamentos da fluência de falaBase: capítulos 45 a 48.
+
+Abordagem neurolinguística da gagueiraBase: capítulo 45.
+
+Abordagem motora da gagueiraBase: capítulo 45.
+
+Abordagem fenomenológica da fluênciaBase: capítulo 46.
+
+Fluência como fenômeno complexoBase: capítulo 47.
+
+Aspectos psicolinguísticos da gagueiraBase: capítulo 48.
+
+Comparação entre modelos explicativos da gagueiraBase: capítulos 45 a 48.
+
+Estrutura geral
+
+Área: Linguagem
+
+├── Unidade 1 — Avaliação e diagnóstico
+
+├── Unidade 2 — Fonologia
+
+├── Unidade 3 — Transtornos da linguagem oral
+
+├── Unidade 4 — Leitura, escrita e aprendizagem
+
+├── Unidade 5 — Condições do desenvolvimento
+
+├── Unidade 6 — Linguagem no adulto
+
+├── Unidade 7 — Corpo, psiquismo e práticas terapêuticas
+
+└── Unidade 8 — Fluência e gagueira
+
+A próxima etapa correta é analisar o capítulo 28 e identificar suas subseções reais. Somente depois será possível confirmar quais desses módulos devem permanecer separados ou ser agrupados.

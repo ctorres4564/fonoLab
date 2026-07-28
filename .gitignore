@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# PDFs de referência bibliográfica (arquivos grandes, não são código fonte)
+doc/*.pdf
+
+# Arquivos temporários de extração de documentos
+docs/temp_docx/
+docs/area.zip
+
+# Documentos Word na raiz
+Área.docx
+
+# Variáveis de ambiente (se existirem no futuro)
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
