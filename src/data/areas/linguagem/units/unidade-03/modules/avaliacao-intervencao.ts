@@ -1,6 +1,6 @@
-import type { LearningModule } from '@/types/platform'
+import { defineFonoLabModule } from '@/methodology/fonolab'
 
-export const moduloAvaliacaoIntervencaoTL: LearningModule = {
+export const moduloAvaliacaoIntervencaoTL = defineFonoLabModule({
   id: 'mod-transtornos-linguagem-avaliacao-intervencao',
   slug: 'avaliacao-intervencao-transtornos-linguagem',
   title: 'Avaliação e Intervenção nos Transtornos de Linguagem',
@@ -900,4 +900,4 @@ export const moduloAvaliacaoIntervencaoTL: LearningModule = {
       usedIn: ['Resumo', 'Limitações', 'Questões 3, 7, 8 e 10', 'Exercício de Decisão 1', 'Caso Clínico 1', 'Flashcards 9, 10, 13 e 23'],
     },
   ],
-}
+})

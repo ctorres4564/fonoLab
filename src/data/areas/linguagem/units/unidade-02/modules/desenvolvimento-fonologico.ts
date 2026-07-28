@@ -1,6 +1,6 @@
-import type { LearningModule } from '@/types/platform'
+import { defineFonoLabModule } from '@/methodology/fonolab'
 
-export const moduloDesenvolvimentoFonologico: LearningModule = {
+export const moduloDesenvolvimentoFonologico = defineFonoLabModule({
   id: 'mod-desenvolvimento-fonologico',
   slug: 'desenvolvimento-fonologico',
   title: 'Desenvolvimento fonológico',
@@ -671,4 +671,4 @@ export const moduloDesenvolvimentoFonologico: LearningModule = {
       usedIn: ['learn.summary', 'learn.evidence', 'apply.questions'],
     },
   ],
-}
+})

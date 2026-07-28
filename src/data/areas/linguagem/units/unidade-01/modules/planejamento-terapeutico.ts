@@ -1,6 +1,6 @@
-import type { LearningModule } from '@/types/platform'
+import { defineFonoLabModule } from '@/methodology/fonolab'
 
-export const moduloPlanejamentoTerapeutico: LearningModule = {
+export const moduloPlanejamentoTerapeutico = defineFonoLabModule({
   id: 'mod-planejamento-terapeutico',
   slug: 'planejamento-terapeutico-linguagem',
   title: 'Relação entre avaliação, diagnóstico e planejamento terapêutico',
@@ -324,4 +324,4 @@ export const moduloPlanejamentoTerapeutico: LearningModule = {
       usedIn: ['learn.summary', 'apply.questions'],
     },
   ],
-}
+})

@@ -1,6 +1,6 @@
-import type { LearningModule } from '@/types/platform'
+import { defineFonoLabModule } from '@/methodology/fonolab'
 
-export const moduloBasesNeurobiologicas: LearningModule = {
+export const moduloBasesNeurobiologicas = defineFonoLabModule({
   id: 'mod-transtornos-linguagem-bases-neurobiologicas',
   slug: 'bases-neurobiologicas-transtornos-linguagem',
   title: 'Bases Neurobiológicas dos Transtornos de Linguagem',
@@ -856,4 +856,4 @@ export const moduloBasesNeurobiologicas: LearningModule = {
       usedIn: ['learn.summary', 'learn.limitations'],
     },
   ],
-}
+})

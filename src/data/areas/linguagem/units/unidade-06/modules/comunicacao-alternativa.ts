@@ -1,12 +1,12 @@
-import type { LearningModule } from '@/types/platform'
+import { defineFonoLabModule } from '@/methodology/fonolab'
 
-export const moduloComunicacaoAlternativa: LearningModule = {
+export const moduloComunicacaoAlternativa = defineFonoLabModule({
   id: 'mod-comunicacao-alternativa',
   slug: 'comunicacao-alternativa-ampliada',
   title: 'Comunicação Aumentativa e Alternativa (CAA)',
   description:
     'Fundamentos da Comunicação Aumentativa e Alternativa: recursos sem apoio e com apoio, seleção de vocabulário, métodos de acesso, avaliação centrada na participação, treinamento de parceiros de comunicação e implementação em contextos naturais, em crianças e adultos.',
-  order: 5,
+  order: 2,
   learningObjective:
     'Compreender os fundamentos da Comunicação Aumentativa e Alternativa, seus recursos, indicações, princípios de avaliação, seleção e implementação, considerando funcionalidade, participação, comunicação multimodal e tomada de decisão centrada na pessoa.',
   prerequisiteKnowledge: [
@@ -1018,4 +1018,4 @@ export const moduloComunicacaoAlternativa: LearningModule = {
       usedIn: ['learn.summary', 'apply.questions'],
     },
   ],
-}
+})

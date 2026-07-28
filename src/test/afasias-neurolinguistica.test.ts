@@ -20,7 +20,7 @@ describe('Módulo Afasias: carregamento', () => {
     expect(modulo).toBeDefined()
     expect(modulo.id).toBe('mod-afasias-neurolinguistica')
     expect(modulo.slug).toBe('afasias-neurolinguistica-adulto')
-    expect(modulo.order).toBe(4)
+    expect(modulo.order).toBe(1)
   })
 
   it('está com status "published" após conclusão da auditoria clínica final', () => {
@@ -241,7 +241,7 @@ describe('Módulo Afasias — validação Zod e preservação dos demais módulo
   it('o módulo de Comunicação Aumentativa e Alternativa está publicado ("published") após auditoria clínica e bibliográfica final', () => {
     const moduloCaa = unit.modules.find((m) => m.slug === 'comunicacao-alternativa-ampliada')!
     expect(moduloCaa.id).toBe('mod-comunicacao-alternativa')
-    expect(moduloCaa.order).toBe(5)
+    expect(moduloCaa.order).toBe(2)
     expect(moduloCaa.status).toBe('published')
     expect(moduloCaa.learn.summary[0].text).not.toBe(PLACEHOLDER)
   })

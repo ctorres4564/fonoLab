@@ -1,6 +1,6 @@
-import type { LearningModule } from '@/types/platform'
+import { defineFonoLabModule } from '@/methodology/fonolab'
 
-export const moduloAspectosLinguisticos: LearningModule = {
+export const moduloAspectosLinguisticos = defineFonoLabModule({
   id: 'mod-transtornos-linguagem-aspectos-linguisticos',
   slug: 'aspectos-linguisticos-transtornos-linguagem',
   title: 'Aspectos Linguísticos dos Transtornos de Linguagem',
@@ -819,4 +819,4 @@ export const moduloAspectosLinguisticos: LearningModule = {
       usedIn: ['learn.summary', 'learn.essentialConcepts', 'learn.evidence', 'learn.limitations', 'apply.questions'],
     },
   ],
-}
+})

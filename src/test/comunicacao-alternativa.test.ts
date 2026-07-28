@@ -20,7 +20,7 @@ describe('Módulo CAA: carregamento e preservação de identidade', () => {
     expect(modulo).toBeDefined()
     expect(modulo.id).toBe('mod-comunicacao-alternativa')
     expect(modulo.slug).toBe('comunicacao-alternativa-ampliada')
-    expect(modulo.order).toBe(5)
+    expect(modulo.order).toBe(2)
   })
 
   it('está com status "published" após conclusão da auditoria clínica e bibliográfica', () => {
@@ -251,7 +251,7 @@ describe('Módulo CAA — validação Zod e preservação da unidade e da plataf
   it('o módulo de Afasias e Neurolinguística está publicado ("published")', () => {
     const moduloAfasias = unit.modules.find((m) => m.slug === 'afasias-neurolinguistica-adulto')!
     expect(moduloAfasias.id).toBe('mod-afasias-neurolinguistica')
-    expect(moduloAfasias.order).toBe(4)
+    expect(moduloAfasias.order).toBe(1)
     expect(moduloAfasias.status).toBe('published')
   })
 

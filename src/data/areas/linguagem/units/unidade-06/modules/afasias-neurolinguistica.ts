@@ -1,12 +1,12 @@
-import type { LearningModule } from '@/types/platform'
+import { defineFonoLabModule } from '@/methodology/fonolab'
 
-export const moduloAfasiasNeurolinguistica: LearningModule = {
+export const moduloAfasiasNeurolinguistica = defineFonoLabModule({
   id: 'mod-afasias-neurolinguistica',
   slug: 'afasias-neurolinguistica-adulto',
   title: 'Afasias e Neurolinguística no Adulto e Idoso',
   description:
     'Estudo das alterações de linguagem adquiridas decorrentes de lesões cerebrais focalizadas em adultos e idosos, com foco em diagnóstico diferencial e intervenção baseada em evidências.',
-  order: 4,
+  order: 1,
   learningObjective:
     'Diferenciar os perfis clínicos das principais síndromes afásicas a partir dos eixos de fluência, compreensão e repetição, reconhecendo os limites dessa classificação; compreender o processo de avaliação fonoaudiológica da afasia; e analisar criticamente abordagens de reabilitação baseadas em evidência, sem tratá-las como protocolos universais.',
   prerequisiteKnowledge: [
@@ -961,4 +961,4 @@ export const moduloAfasiasNeurolinguistica: LearningModule = {
       usedIn: ['learn.limitations'],
     },
   ],
-}
+})

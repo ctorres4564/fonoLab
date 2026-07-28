@@ -41,6 +41,11 @@ const ObjectiveQuestionSchema = z
         code: z.ZodIssueCode.custom,
         message: `Questão "${q.id}": correctAlternativeId não corresponde a nenhuma alternativa`,
       })
+    } else if (!found.isCorrect) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Questão "${q.id}": correctAlternativeId aponta para uma alternativa não marcada como correta`,
+      })
     }
     const ids = q.alternatives.map((a) => a.id)
     if (new Set(ids).size !== ids.length) {
@@ -66,11 +71,21 @@ const DecisionOptionSchema = z.object({
   isRecommended: z.boolean(),
 })
 
-const DecisionExerciseSchema = z.object({
-  id: z.string().min(1),
-  situation: z.string().min(1),
-  options: z.array(DecisionOptionSchema).min(2, 'Mínimo de 2 opções'),
-})
+const DecisionExerciseSchema = z
+  .object({
+    id: z.string().min(1),
+    situation: z.string().min(1),
+    options: z.array(DecisionOptionSchema).min(2, 'Mínimo de 2 opções'),
+  })
+  .superRefine((exercise, ctx) => {
+    const recommendedCount = exercise.options.filter((option) => option.isRecommended).length
+    if (recommendedCount !== 1) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Exercício "${exercise.id}" deve possuir exatamente uma opção recomendada`,
+      })
+    }
+  })
 
 const GlossaryItemSchema = z.object({
   id: z.string().min(1),
@@ -92,10 +107,94 @@ const ConceptEdgeSchema = z.object({
   label: z.string().min(1),
 })
 
-const ConceptMapSchema = z.object({
-  centralNode: z.string().min(1),
-  nodes: z.array(ConceptNodeSchema).min(1),
-  edges: z.array(ConceptEdgeSchema),
+const ConceptMapSchema = z
+  .object({
+    centralNode: z.string().min(1),
+    nodes: z.array(ConceptNodeSchema).min(1),
+    edges: z.array(ConceptEdgeSchema),
+  })
+  .superRefine((map, ctx) => {
+    const nodeIds = map.nodes.map((node) => node.id)
+    const nodeIdSet = new Set(nodeIds)
+    if (nodeIdSet.size !== nodeIds.length) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Mapa conceitual contém IDs de nós duplicados',
+      })
+    }
+    if (map.nodes.filter((node) => node.type === 'central').length !== 1) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Mapa conceitual deve possuir exatamente um nó do tipo central',
+      })
+    }
+    for (const edge of map.edges) {
+      if (!nodeIdSet.has(edge.from) || !nodeIdSet.has(edge.to)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Aresta "${edge.id}" aponta para nó inexistente`,
+        })
+      }
+    }
+  })
+
+const BranchingCaseSchema = z
+  .object({
+    id: z.string().min(1),
+    title: z.string().min(1),
+    description: z.string().min(1),
+    startSceneId: z.string().min(1),
+    scenes: z.array(
+      z.object({
+        id: z.string().min(1),
+        title: z.string().min(1),
+        text: z.string().min(1),
+        choices: z.array(
+          z.object({
+            text: z.string().min(1),
+            feedback: z.string().min(1),
+            nextSceneId: z.string().nullable(),
+            isRecommended: z.boolean().optional(),
+          })
+        ),
+      })
+    ).min(1),
+  })
+  .superRefine((branchingCase, ctx) => {
+    const sceneIds = new Set(branchingCase.scenes.map((scene) => scene.id))
+    if (!sceneIds.has(branchingCase.startSceneId)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Caso "${branchingCase.id}" aponta para uma cena inicial inexistente`,
+      })
+    }
+    for (const scene of branchingCase.scenes) {
+      for (const choice of scene.choices) {
+        if (choice.nextSceneId !== null && !sceneIds.has(choice.nextSceneId)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Cena "${scene.id}" aponta para uma próxima cena inexistente`,
+          })
+        }
+      }
+    }
+  })
+
+const TranscriptActivitySchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  instruction: z.string().min(1),
+  tokens: z.array(
+    z.object({
+      id: z.string().min(1),
+      text: z.string().min(1),
+      isInteractive: z.boolean(),
+      correctAnswer: z.boolean(),
+      errorType: z.string().optional(),
+      feedback: z.string().optional(),
+    })
+  ).min(1),
+  explanation: z.string().min(1),
 })
 
 const ReferenceSchema = z.object({
@@ -155,6 +254,8 @@ const ApplyContentSchema = z.object({
       questions: z.array(ObjectiveQuestionSchema),
     })
   ),
+  branchingCases: z.array(BranchingCaseSchema).optional(),
+  transcriptActivities: z.array(TranscriptActivitySchema).optional(),
 })
 
 const ReviewContentSchema = z.object({

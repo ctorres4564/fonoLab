@@ -16,7 +16,7 @@ export const unidade06: LearningUnit = {
       title: 'Afasias e Neurolinguística no Adulto e Idoso',
       description:
         'Estudo das alterações de linguagem adquiridas decorrentes de lesões cerebrais focalizadas em adultos e idosos, com foco em diagnóstico diferencial e intervenção baseada em evidências.',
-      order: 4,
+      order: 1,
       learningObjective:
         'Diferenciar os perfis clínicos das principais síndromes afásicas a partir dos eixos de fluência, compreensão e repetição, reconhecendo os limites dessa classificação; compreender o processo de avaliação fonoaudiológica da afasia; e analisar criticamente abordagens de reabilitação baseadas em evidência, sem tratá-las como protocolos universais.',
       estimatedTimeMinutes: 180,
@@ -35,7 +35,7 @@ export const unidade06: LearningUnit = {
       title: 'Comunicação Aumentativa e Alternativa (CAA)',
       description:
         'Fundamentos da Comunicação Aumentativa e Alternativa: recursos sem apoio e com apoio, seleção de vocabulário, métodos de acesso, avaliação centrada na participação, treinamento de parceiros de comunicação e implementação em contextos naturais, em crianças e adultos.',
-      order: 5,
+      order: 2,
       learningObjective:
         'Compreender os fundamentos da Comunicação Aumentativa e Alternativa, seus recursos, indicações, princípios de avaliação, seleção e implementação, considerando funcionalidade, participação, comunicação multimodal e tomada de decisão centrada na pessoa.',
       estimatedTimeMinutes: 180,

@@ -2,10 +2,17 @@
 // TIPOS DE PLATAFORMA — Hierarquia principal
 // ─────────────────────────────────────────────────────────────────────────────
 
-import type { LearnContent, ApplyContent, ReviewContent } from './content'
+import type { LearningMethodology } from './methodology'
+import type {
+  CoreContentStatus,
+  CoreDifficulty,
+  CoreModuleMetadata,
+  CoreReference,
+} from '@/methodology/core'
+import type { HealthLearningModule } from '@/methodology/health'
 
-export type Difficulty = 'introductory' | 'intermediate' | 'advanced'
-export type ContentStatus = 'draft' | 'review' | 'published'
+export type Difficulty = CoreDifficulty
+export type ContentStatus = CoreContentStatus
 export type ModuleStatus = 'not_started' | 'in_progress' | 'completed' | 'review_pending'
 
 export interface LearningPlatform {
@@ -13,6 +20,7 @@ export interface LearningPlatform {
   title: string
   description: string
   version: string
+  methodology: LearningMethodology
   areas: LearningArea[]
 }
 
@@ -35,37 +43,9 @@ export interface LearningUnit {
   modules: (LearningModuleMetadata & { totalActivities: number })[]
 }
 
-export interface LearningModuleMetadata {
-  id: string
-  slug: string
-  title: string
-  description: string
-  order: number
+export type LearningModuleMetadata = CoreModuleMetadata
 
-  learningObjective: string
-  prerequisiteKnowledge?: string[]
-  estimatedTimeMinutes: number
-  difficulty: Difficulty
-  status: ContentStatus
-  totalActivities?: number
-}
-
-export interface LearningModule extends LearningModuleMetadata {
-  learn: LearnContent
-  apply: ApplyContent
-  review: ReviewContent
-
-  references: Reference[]
-}
-
-export interface Reference {
-  id: string
-  authors: string
-  title: string
-  source: string
-  year: number
-  doi?: string
-  url?: string
-  accessDate?: string
-  usedIn: string[]
-}
+// Aliases de compatibilidade: o produto FonoLab usa a extensão de saúde
+// sobre o núcleo pedagógico genérico.
+export type LearningModule = HealthLearningModule
+export type Reference = CoreReference
